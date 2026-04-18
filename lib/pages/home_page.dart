@@ -12,7 +12,12 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.all(16),
         child: Column(
           children: [
-            
+            TextField(
+              decoration: InputDecoration(labelText: "Masukkan Nama"),
+              onChanged: (value) {
+                context.read<UserBloc>().add(NamaChanged(value));
+              },
+            ),
           ],
         ),
       ),

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mvvmbloc/viewmodel/user_bloc.dart';
 import 'package:mvvmbloc/viewmodel/user_event.dart';
 import 'package:mvvmbloc/viewmodel/user_state.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +28,7 @@ class HomePage extends StatelessWidget {
               },
             ),
             SizedBox(height: 20),
-            
+
             BlocBuilder<UserBloc, UserState>(
               builder: (context, state) {
                 return Text(

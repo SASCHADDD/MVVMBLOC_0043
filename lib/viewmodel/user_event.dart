@@ -10,4 +10,3 @@ class EmailChanged extends UserEvent{
 
   EmailChanged(this.email);
 }
-
